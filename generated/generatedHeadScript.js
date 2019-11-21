@@ -1,5 +1,7 @@
-const ROOT_URL = 'http://modalgenerator.local';
+// const PRODUCT = 'KEY RING';
+// const IMAGE = 'images/keyring1.jpg';
 
+const ROOT_URL = 'http://modalgenerator.local/';
 function addToHead(element) {
     document.head.appendChild(element);
 }
@@ -35,23 +37,27 @@ function addDiv(id, divClass, content) {
 }
 
 function constructModal() {
-    let content = "<h1>GET A FREE PERSONALISED KEY RING</h1>\
+    let imageSource = ROOT_URL + IMAGE;
+    let content = "<h1>GET A FREE PERSONALISED " + PRODUCT + "</h1>\
         <h2>WHEN YOU SIGN UP TO OUR EMAIL LIST</h2>\
-        <form action='#'>\
-            <input type='text' id='name' placeholder='First Name'></input>\
-            <input type='email' id='email' placeholder='Email'></input>\
-            <input onClick='ddexitpop.hidepopup()' class='calltoaction' type='submit' value='SUBSCRIBE'></input>\
-        </form>"
+        <img id='product-offer' src='" + imageSource +"' width='30%'>\
+        <div id='subscribe-form'>\
+            <form action='#'>\
+                <input type='text' id='name' placeholder='First Name'></input>\
+                <input type='email' id='email' placeholder='Email'></input>\
+                <input onClick='ddexitpop.hidepopup()' class='calltoaction' type='submit' value='SUBSCRIBE'></input>\
+            </form>\
+        </div>"
     return content;
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    let scriptLocation = ROOT_URL + "/boilerplate/functions.js";
+    let scriptLocation = ROOT_URL + "boilerplate/functions.js";
     addLink("stylesheet", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
-    let cssLocation = ROOT_URL + "/boilerplate/ddexitpop.css"
+    let cssLocation = ROOT_URL + "boilerplate/ddexitpop.css"
     addLink("stylesheet", cssLocation);
     addScript("https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js");
-    scriptLocation = ROOT_URL + "/boilerplate/ddexitpop.js";
+    scriptLocation = ROOT_URL + "boilerplate/ddexitpop.js";
     addScript(scriptLocation);
     addDiv("ddexitpop1", "ddexitpop", constructModal());
 });

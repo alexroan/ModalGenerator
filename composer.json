@@ -1,0 +1,13 @@
+{
+    "name": "alexroan/modalgenerator",
+    "type": "project",
+    "require": {
+        "tedivm/jshrink": "^1.3"
+    },
+    "authors": [
+        {
+            "name": "Alex Roan",
+            "email": "alex.roan@hotmail.com"
+        }
+    ]
+}
