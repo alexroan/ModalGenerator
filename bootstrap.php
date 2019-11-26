@@ -2,6 +2,7 @@
 
 session_start();
 require './vendor/autoload.php';
+require_once './app/Mailchimp.php';
 
 $dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv->load();
@@ -14,3 +15,5 @@ $provider = new \League\OAuth2\Client\Provider\GenericProvider([
     'urlAccessToken'          => 'https://login.mailchimp.com/oauth2/token',
     'urlResourceOwnerDetails' => 'https://login.mailchimp.com/oauth2/metadata'
 ]);
+
+$mailchimp = new Mailchimp($provider);

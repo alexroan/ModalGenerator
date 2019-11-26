@@ -2,20 +2,15 @@
 
 require_once './bootstrap.php';
 
-$api = $_SESSION['userData']['api_endpoint'] . '/3.0';
-
-$request = $provider->getAuthenticatedRequest(
-    'GET',
-    $api . '/lists',
-    $_SESSION['accessToken']
-);
-$response = $provider->getParsedResponse($request);
+$baseUrl = $_SESSION['userData']['api_endpoint'];
+$accessToken = $_SESSION['accessToken'];
+$response = $mailchimp->getLists($baseUrl, $accessToken);
 
 ?>
 
 <form id="productForm">
-    <input type="email" name="email" placeholder="Your Email" />
-    <input type="text" name="colour" placeholder="Colour" />
+    <input type="email" name="email" value="<?= $_COOKIE['email'] ?>" />
+    <input type="text" name="colour" value="<?= $_COOKIE['colour'] ?>" />
     <select name="productName" for="productForm" >
         <option value="KEY RING">Key ring</option>
         <option value="COASTER">Coaster</option>
