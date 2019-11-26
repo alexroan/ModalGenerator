@@ -7,7 +7,6 @@ setcookie('colour', $_POST['colour']);
 setcookie('productName', $_POST['productName']);
 setcookie('productImage', $_POST['productImage']);
 
-
 // Fetch the authorization URL from the provider; this returns the
 // urlAuthorize option and generates and applies any necessary parameters
 // (e.g. state).
