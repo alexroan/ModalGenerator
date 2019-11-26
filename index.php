@@ -12,7 +12,7 @@ require_once './bootstrap.php';
     <body>
         <script>
             // $(document).ready(function(){
-            //     let baseUrl="http://<?= $_SERVER['HTTP_HOST']; ?>/api/generate.php?";
+            //     let baseUrl="http://<?= $_SERVER['HTTP_HOST']; ?>/api/generateServedScript.php?";
             //     $('#productForm').submit(function (event) {
             //         event.preventDefault();
             //         var values = $(this).serialize();
