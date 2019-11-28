@@ -1,5 +1,4 @@
 // const PRODUCT = 'KEY RING';
-// const IMAGE = 'images/keyring1.jpg';
 
 const ROOT_URL = 'http://modalgenerator.local/';
 function addToHead(element) {
@@ -37,10 +36,8 @@ function addDiv(id, divClass, content) {
 }
 
 function constructModal() {
-    let imageSource = ROOT_URL + IMAGE;
     let content = "<h1>GET A FREE PERSONALISED " + PRODUCT + "</h1>\
         <h2>WHEN YOU SIGN UP TO OUR EMAIL LIST</h2>\
-        <img id='product-offer' src='" + imageSource +"' width='30%'>\
         <div id='subscribe-form'>\
             <form action='#'>\
                 <input type='text' id='name' placeholder='First Name'></input>\

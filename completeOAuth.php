@@ -12,9 +12,13 @@ try {
     $_SESSION['userData'] 
         = $mailchimp->getMetaData("https://login.mailchimp.com/oauth2/metadata", $_SESSION['accessToken']);
 
-    header("Location: createModal.php");
+    $email = $_SESSION['userData']['login']['email'];
+    $accessToken = $_SESSION['accessToken'];    
+    $_SESSION['partnerId'] = $database->insertPartner($email, $accessToken);
 
-} catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+    header("Location: selectMailingList.php");
+
+} catch (Exception $e) {
 
     // Failed to get the access token or user details.
     exit($e->getMessage());

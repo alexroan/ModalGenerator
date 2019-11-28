@@ -10,11 +10,28 @@ class Database {
         $this->connection = $connection;
     }
 
-    public function insert(string $table, array $columns, array $values) {
-        $columns = implode(', ', $columns);
-        $values = "'" . implode("', '", $values) . "'";
-        $sql = "insert into $table ($columns) values ($values)";
-        $this->connection->insert($sql);
+    public function insertPartner(string $email, string $accessToken) {
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+        $accessToken = filter_var($accessToken, FILTER_SANITIZE_STRING);
+
+        $sql = "insert into partner (email, access_token) 
+            values ('$email', '$accessToken')";
+        
+        $id = $this->connection->query($sql);
+        return $id;
+    }
+
+    public function updateListId(int $id, string $email, string $accessToken, string $listId) {
+        $id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+        $accessToken = filter_var($accessToken, FILTER_SANITIZE_STRING);
+        $listId = filter_var($listId, FILTER_SANITIZE_STRING);
+
+        $sql = "update partner set list_id = '$listId' where 
+            id = $id and email = '$email' and access_token = '$accessToken'";
+
+        $id = $this->connection->query($sql);
+        return $id;
     }
 
 }

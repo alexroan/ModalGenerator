@@ -4,11 +4,10 @@ require __DIR__.'./../vendor/autoload.php';
 
 class HeadScriptGenerator {
 
-    public function generateHeadScript(string $clientEmail, string $productName, string $productImage) {
+    public function generateHeadScript(string $clientEmail, string $productName) {
         $generatedFile = file_get_contents('../generated/generatedHeadScript.js');
 
         $generatedFile = "const PRODUCT = '$productName';" . $generatedFile;
-        $generatedFile = "const IMAGE = '$productImage';" . $generatedFile;
 
         return $this->deployHeadScript($clientEmail, $generatedFile);
     }

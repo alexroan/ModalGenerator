@@ -6,8 +6,9 @@ class DatabaseConnection {
 
     private $connection;
 
-    public function __construct(string $host, string $database, string $username, string $password, string $port) {
-        $this->connection = new mysqli($host, $username, $password, $database, $port);
+    public function __construct($credentials) {
+        $this->connection = new mysqli($credentials['host'], $credentials['user'], 
+            $credentials['pass'], $credentials['name'], $credentials['port']);
         if ($this->connection->connect_error) {
             throw new Exception("Connection failed: " . $this->connection->connect_error);
         }
@@ -18,11 +19,12 @@ class DatabaseConnection {
         $this->connection->close();
     }
 
-    public function insert($sql) {
+    public function query($sql) {
         if ($this->connection->query($sql) === TRUE) {
             return $this->connection->insert_id;
         }
-        return false;
+        throw new Exception($this->connection->error);
+        
     }
 
 }

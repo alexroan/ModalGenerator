@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class OauthMigration extends AbstractMigration
+class PartnerMigration extends AbstractMigration
 {
     /**
      * Change Method.
@@ -31,10 +31,10 @@ class OauthMigration extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('oauth');
+        $table = $this->table('partner');
         $table->addColumn('email', 'string', ['limit' => 80])
             ->addColumn('access_token', 'string', ['limit' => 60])
-            ->addColumn('expires_at', 'datetime')
+            ->addColumn('list_id', 'string', ['null' => true, 'limit' => 60])
             ->create();
     }
 }
