@@ -173,9 +173,17 @@ jQuery(function(){
 		contentsource: ['id', 'ddexitpop1'],
 		fxclass: 'random',
 		displayfreq: 'always',
+		hideaftershow: true,
 		onddexitpop: function($popup){
-			console.log('Exit Pop Animation Class Name: ' + ddexitpop.settings.fxclass)
+			$(document).on(
+				{
+					change: () => {
+						var newImageSrc = $('#thecarrot-color-chooser').val();
+						$('#thecarrot-selected-colour-image').attr('src', newImageSrc);
+					}
+				},
+				'#thecarrot-color-chooser'
+			)
 		}
-		
 	})
 })

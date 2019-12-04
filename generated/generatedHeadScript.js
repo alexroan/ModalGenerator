@@ -1,4 +1,5 @@
-const PRODUCT = 'KEY RING';
+const TITLE = 'get a free personalised key ring';
+const SUBTITLE = 'when you sign up to our mailing list';
 const ROOT_URL = 'http://modalgenerator.local/';
 function addToHead(element) {
     document.head.appendChild(element);
@@ -36,21 +37,39 @@ function addDiv(id, divClass, content) {
 
 function constructModal() {
     let content = "<div class='thecarrot-modal-header'>\
-            <h1>GET A FREE PERSONALISED " + PRODUCT + "</h1>\
-            <h2>WHEN YOU SIGN UP TO OUR EMAIL LIST</h2>\
+            <h1>" + TITLE + "</h1>\
+            <h2>" + SUBTITLE + "</h2>\
         </div>\
         <div class='thecarrot-modal-body'>\
             <div class='thecarrot-modal-body-left thecarrot-split-div'>\
                 <div class='thecarrot-modal-body-left-content thecarrot-split-content'>\
-                    <p>left content</p>\
+                    <img id='thecarrot-selected-colour-image' src='" + ROOT_URL + "/images/keyring-black.png' />\
+                    <img id='thecarrot-price-cut' src='" + ROOT_URL + "/images/pricecut.png' />\
+                    <div class='thecarrot-colour-chooser-wrapper'>\
+                        <select form='thecarrot-subscribe-form' id='thecarrot-color-chooser' class='image-picker'>\
+                            <option value='" + ROOT_URL + "images/keyring-black.png'>black</option>\
+                            <option value='" + ROOT_URL + "images/keyring-blue.png'>blue</option>\
+                            <option value='" + ROOT_URL + "images/keyring-burgundy.png'>burgundy</option>\
+                            <option value='" + ROOT_URL + "images/keyring-green.png'>green</option>\
+                            <option value='" + ROOT_URL + "images/keyring-orange.png'>orange</option>\
+                            <option value='" + ROOT_URL + "images/keyring-pink.png'>pink</option>\
+                            <option value='" + ROOT_URL + "images/keyring-purple.png'>purple</option>\
+                            <option value='" + ROOT_URL + "images/keyring-red.png'>red</option>\
+                        </select>\
+                    </div>\
+                    <img id='thecarrot-dust-and-things-logo' src='" + ROOT_URL +"images/dustandthings.png' />\
                 </div>\
             </div>\
-            <div id='subscribe-form' class='thecarrot-modal-body-right thecarrot-split-div'>\
+            <div class='thecarrot-modal-body-right thecarrot-split-div'>\
                 <div class='thecarrot-modal-body-right-content thecarrot-split-content'>\
-                    <form action='#'>\
-                        <input type='text' id='name' placeholder='First Name'></input>\
-                        <input type='email' id='email' placeholder='Email'></input>\
-                        <input onClick='ddexitpop.hidepopup()' class='calltoaction' type='submit' value='SUBSCRIBE'></input>\
+                    <form action='#' id='thecarrot-subscribe-form'>\
+                        <input type='text' id='name' placeholder='FIRST NAME'></input>\
+                        <input type='email' id='email' placeholder='EMAIL'></input>\
+                        <div class='thecarrot-subscribe-form-text'>\
+                            <p>Delivered to your door</p>\
+                            <p>in 3-5 days</p>\
+                            <input onClick='ddexitpop.hidepopup()' class='calltoaction' type='submit' value='SUBSCRIBE'></input>\
+                        </div>\
                     </form>\
                 </div>\
             </div>\
