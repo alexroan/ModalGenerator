@@ -26,16 +26,14 @@
 
 
 .ddexitpop { /* user defined exit popup DIV style */
-    width: 90%;
+    width: 70%;
     max-width: 700px;
-    border: 2px solid black;
-    padding: 10px;
+    padding: 0;
     z-index: 2;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
-    border: 20px solid black;
     background: white;
     left: 0;
     top: -100px; /* shift popup DIV upwards by 100px from middle of screen */
@@ -43,7 +41,6 @@
 		animation-duration: .5s; /* customize animation duration */
     visibility: hidden;
 }
-
 
 
 .ddexitpop .calltoaction{ /* demo button style */
@@ -91,6 +88,45 @@ div.closeexitpop{ /* Large x close button  */
 #ddexitpopwrapper.open .ddexitpop{ /* style of exit pop content DIV when exit pop is open */
     visibility: visible;
 }
+
+
+/* The Carrot styling */
+/* The Carrot Header Start */
+.ddexitpop .thecarrot-modal-header {
+    padding: 2rem;
+    background-color: #e7e7e7;
+    text-align:center;
+}
+.ddexitpop .thecarrot-modal-header h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.ddexitpop .thecarrot-modal-header h2 {
+    text-transform: lowercase;
+    font-size: 1.25rem;
+}
+/* The Carrot Header End */
+
+/* The Carrot Body Start */
+.ddexitpop .thecarrot-modal-body {
+    padding: 2rem;
+    display: table;
+    width: 100%;
+    position:relative;
+}
+.ddexitpop .thecarrot-modal-body .thecarrot-split-div {
+    height: 100%;
+}
+.ddexitpop .thecarrot-modal-body .thecarrot-modal-body-left {
+    float: left;
+    width: 50%;
+}
+.ddexitpop .thecarrot-modal-body .thecarrot-modal-body-right {
+    float: right;
+    width: 50%;
+}
+
+/* The Carrot Body End */
 
 
 /* #### CSS that's applied when the viewing area's height is 765px or less #### */

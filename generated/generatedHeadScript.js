@@ -1,5 +1,4 @@
-// const PRODUCT = 'KEY RING';
-
+const PRODUCT = 'KEY RING';
 const ROOT_URL = 'http://modalgenerator.local/';
 function addToHead(element) {
     document.head.appendChild(element);
@@ -36,14 +35,25 @@ function addDiv(id, divClass, content) {
 }
 
 function constructModal() {
-    let content = "<h1>GET A FREE PERSONALISED " + PRODUCT + "</h1>\
-        <h2>WHEN YOU SIGN UP TO OUR EMAIL LIST</h2>\
-        <div id='subscribe-form'>\
-            <form action='#'>\
-                <input type='text' id='name' placeholder='First Name'></input>\
-                <input type='email' id='email' placeholder='Email'></input>\
-                <input onClick='ddexitpop.hidepopup()' class='calltoaction' type='submit' value='SUBSCRIBE'></input>\
-            </form>\
+    let content = "<div class='thecarrot-modal-header'>\
+            <h1>GET A FREE PERSONALISED " + PRODUCT + "</h1>\
+            <h2>WHEN YOU SIGN UP TO OUR EMAIL LIST</h2>\
+        </div>\
+        <div class='thecarrot-modal-body'>\
+            <div class='thecarrot-modal-body-left thecarrot-split-div'>\
+                <div class='thecarrot-modal-body-left-content thecarrot-split-content'>\
+                    <p>left content</p>\
+                </div>\
+            </div>\
+            <div id='subscribe-form' class='thecarrot-modal-body-right thecarrot-split-div'>\
+                <div class='thecarrot-modal-body-right-content thecarrot-split-content'>\
+                    <form action='#'>\
+                        <input type='text' id='name' placeholder='First Name'></input>\
+                        <input type='email' id='email' placeholder='Email'></input>\
+                        <input onClick='ddexitpop.hidepopup()' class='calltoaction' type='submit' value='SUBSCRIBE'></input>\
+                    </form>\
+                </div>\
+            </div>\
         </div>"
     return content;
 }

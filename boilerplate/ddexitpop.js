@@ -5,7 +5,8 @@
 var ddexitpop = (function($){
 
 	var defaults = {delayregister:0, delayshow:200, hideaftershow:true, displayfreq: 'always', persistcookie: 'ddexitpop_shown', fxclass: 'rubberBand', mobileshowafter: 3000, onddexitpop:function(){}}
-	var animatedcssclasses = ["bounce","flash","pulse","rubberBand","shake","swing","tada","wobble","jello","bounceIn","bounceInDown","bounceInLeft","bounceInRight","bounceInUp","fadeIn","fadeInDown","fadeInDownBig","fadeInLeft","fadeInLeftBig","fadeInRight","fadeInRightBig","fadeInUp","fadeInUpBig","flipInX","flipInY","lightSpeedIn","rotateIn","rotateInDownLeft","rotateInDownRight","rotateInUpLeft","rotateInUpRight","slideInUp","slideInDown","slideInLeft","slideInRight","zoomIn","zoomInDown","zoomInLeft","zoomInRight","zoomInUp","rollIn"]
+	// var animatedcssclasses = ["bounce","flash","pulse","rubberBand","shake","swing","tada","wobble","jello","bounceIn","bounceInDown","bounceInLeft","bounceInRight","bounceInUp","fadeIn","fadeInDown","fadeInDownBig","fadeInLeft","fadeInLeftBig","fadeInRight","fadeInRightBig","fadeInUp","fadeInUpBig","flipInX","flipInY","lightSpeedIn","rotateIn","rotateInDownLeft","rotateInDownRight","rotateInUpLeft","rotateInUpRight","slideInUp","slideInDown","slideInLeft","slideInRight","zoomIn","zoomInDown","zoomInLeft","zoomInRight","zoomInUp","rollIn"]
+	var animatedcssclasses = [];
 
 	var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
 	var crossdeviceclickevt = isTouch? 'touchstart' : 'click'
