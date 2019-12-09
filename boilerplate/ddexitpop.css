@@ -1,6 +1,7 @@
 #ddexitpopwrapper { /* dynamically generated wrapper DIV that surrounds exit pop content DIV */
     display: flex;
     position: fixed;
+    overflow-y: auto;
     left: 0;
     top: 0;
     width: 100%;
@@ -90,7 +91,7 @@ div.closeexitpop{ /* Large x close button  */
 }
 
 
-/* The Carrot styling */
+/* The Carrot Styling Start */
 /* The Carrot Header Start */
 .ddexitpop .thecarrot-modal-header {
     padding: 2rem;
@@ -111,6 +112,7 @@ div.closeexitpop{ /* Large x close button  */
 .ddexitpop .thecarrot-modal-body {
     padding: 1rem;
     display: flex;
+    flex-direction: row;
     width: 100%;
     position:relative;
 }
@@ -145,6 +147,9 @@ div.closeexitpop{ /* Large x close button  */
 #thecarrot-subscribe-form input[type="email"] {
     margin-bottom: 1rem;
 }
+#thecarrot-subscribe-form select {
+    margin-bottom: 1rem;
+}
 #thecarrot-subscribe-form .thecarrot-subscribe-form-text {
     text-align: center;
     font-style: italic;
@@ -160,13 +165,85 @@ div.closeexitpop{ /* Large x close button  */
     margin-bottom: 0;
     box-shadow: 0 5px 5px 0 #e7e7e7
 }
-
 /* The Carrot Body End */
 
+/* 720px and below */
+@media screen and (max-width: 720px){
+    /* The Carrot Header Start */
+    .ddexitpop .thecarrot-modal-header {
+        padding: 1rem;
+    }
+    .ddexitpop .thecarrot-modal-header h1 {
+        font-size: 1rem;
+    }
+    .ddexitpop .thecarrot-modal-header h2 {
+        text-transform: lowercase;
+        font-size: 0.9rem;
+        margin-bottom:0;
+    }
+    /* The Carrot Header End */
+    /* The Carrot Body Start */
+    .ddexitpop .thecarrot-modal-body {
+        font-size: 0.9rem;
+    }
+    .ddexitpop .thecarrot-modal-body input {
+        font-size: 0.9rem;
+        height:2rem;
+    }
+    .ddexitpop .thecarrot-modal-body select {
+        font-size: 0.9rem;
+        height:2rem;
+    }
+    #thecarrot-subscribe-form input[type="text"] {
+        margin-bottom: 0.2rem;
+    }
+    #thecarrot-subscribe-form input[type="email"] {
+        margin-bottom: 0.2rem;
+    }
+    #thecarrot-subscribe-form select {
+        margin-bottom: 0.2rem;
+    }
+    #thecarrot-subscribe-form .thecarrot-subscribe-form-text p {
+        margin-bottom: 0;
+    }
+    #thecarrot-subscribe-form .thecarrot-subscribe-form-text input {
+        padding:0;
+    }
+    /* The Carrot Body End */
+}
+
+/* 500px and below */
+@media screen and (max-width: 500px){
+    .ddexitpop{
+		top: 5rem;
+	}
+    /* The Carrot Body Start */
+    .ddexitpop .thecarrot-modal-body {
+        flex-direction: column;
+    }
+    .ddexitpop .thecarrot-modal-body .thecarrot-modal-body-left-content {
+        margin-right: 0;
+    }
+    #thecarrot-subscribe-form .thecarrot-subscribe-form-text {
+        position: relative;
+    }
+    #thecarrot-subscribe-form input[type="text"] {
+        margin-bottom: 0;
+    }
+    #thecarrot-subscribe-form input[type="email"] {
+        margin-bottom: 0;
+    }
+    #thecarrot-subscribe-form select {
+        margin-bottom: 0;
+    }
+    /* The Carrot Body End */
+}
+
+/* The Carrot Styling End */
 
 /* #### CSS that's applied when the viewing area's height is 765px or less #### */
 
-@media screen and (max-height: 765px){
+@media screen and (max-height: 765px) and (min-width: 501px){
 	.ddexitpop{
 		top: 0; /* don't shift exit pop up upwards 100px on screens that aren't very tall */
 	}

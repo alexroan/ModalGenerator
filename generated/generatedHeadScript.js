@@ -45,16 +45,17 @@ function constructModal() {
                 <div class='thecarrot-modal-body-left-content thecarrot-split-content'>\
                     <img id='thecarrot-selected-colour-image' src='" + ROOT_URL + "/images/keyring-black.png' />\
                     <img id='thecarrot-price-cut' src='" + ROOT_URL + "/images/pricecut.png' />\
+                    <input type='text' id='keyring-name' placeholder='KEYRING NAME'></input>\
                     <div class='thecarrot-colour-chooser-wrapper'>\
                         <select form='thecarrot-subscribe-form' id='thecarrot-color-chooser' class='image-picker'>\
-                            <option value='" + ROOT_URL + "images/keyring-black.png'>black</option>\
-                            <option value='" + ROOT_URL + "images/keyring-blue.png'>blue</option>\
-                            <option value='" + ROOT_URL + "images/keyring-burgundy.png'>burgundy</option>\
-                            <option value='" + ROOT_URL + "images/keyring-green.png'>green</option>\
-                            <option value='" + ROOT_URL + "images/keyring-orange.png'>orange</option>\
-                            <option value='" + ROOT_URL + "images/keyring-pink.png'>pink</option>\
-                            <option value='" + ROOT_URL + "images/keyring-purple.png'>purple</option>\
-                            <option value='" + ROOT_URL + "images/keyring-red.png'>red</option>\
+                            <option value='" + ROOT_URL + "images/keyring-black.png'>BLACK</option>\
+                            <option value='" + ROOT_URL + "images/keyring-blue.png'>BLUE</option>\
+                            <option value='" + ROOT_URL + "images/keyring-burgundy.png'>BURGUNDY</option>\
+                            <option value='" + ROOT_URL + "images/keyring-green.png'>GREEN</option>\
+                            <option value='" + ROOT_URL + "images/keyring-orange.png'>ORANGE</option>\
+                            <option value='" + ROOT_URL + "images/keyring-pink.png'>PINK</option>\
+                            <option value='" + ROOT_URL + "images/keyring-purple.png'>PURPLE</option>\
+                            <option value='" + ROOT_URL + "images/keyring-red.png'>RED</option>\
                         </select>\
                     </div>\
                     <img id='thecarrot-dust-and-things-logo' src='" + ROOT_URL +"images/dustandthings.png' />\
