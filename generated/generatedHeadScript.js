@@ -47,7 +47,8 @@ function constructModal() {
                     <img id='thecarrot-price-cut' src='" + ROOT_URL + "/images/pricecut.png' />\
                     <input type='text' id='keyring-name' placeholder='KEYRING NAME'></input>\
                     <div class='thecarrot-colour-chooser-wrapper'>\
-                        <select form='thecarrot-subscribe-form' id='thecarrot-color-chooser' class='image-picker'>\
+                        <select form='thecarrot-subscribe-form' id='thecarrot-color-chooser' class='image-picker' required>\
+                            <option>KEYRING COLOUR</option>\
                             <option value='" + ROOT_URL + "images/keyring-black.png'>BLACK</option>\
                             <option value='" + ROOT_URL + "images/keyring-blue.png'>BLUE</option>\
                             <option value='" + ROOT_URL + "images/keyring-burgundy.png'>BURGUNDY</option>\
@@ -58,7 +59,6 @@ function constructModal() {
                             <option value='" + ROOT_URL + "images/keyring-red.png'>RED</option>\
                         </select>\
                     </div>\
-                    <img id='thecarrot-dust-and-things-logo' src='" + ROOT_URL +"images/dustandthings.png' />\
                 </div>\
             </div>\
             <div class='thecarrot-modal-body-right thecarrot-split-div'>\
@@ -79,7 +79,6 @@ function constructModal() {
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {
-    let scriptLocation = ROOT_URL + "boilerplate/functions.js";
     addLink("stylesheet", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
     let cssLocation = ROOT_URL + "boilerplate/ddexitpop.css"
     addLink("stylesheet", cssLocation);

@@ -215,7 +215,7 @@ div.closeexitpop{ /* Large x close button  */
 /* 500px and below */
 @media screen and (max-width: 500px){
     .ddexitpop{
-		top: 5rem;
+		top: 3rem;
 	}
     /* The Carrot Body Start */
     .ddexitpop .thecarrot-modal-body {
