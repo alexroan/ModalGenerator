@@ -167,23 +167,3 @@ var ddexitpop = (function($){
 
 
 })(jQuery);
-
-jQuery(function(){
-	ddexitpop.init({
-		contentsource: ['id', 'ddexitpop1'],
-		fxclass: 'random',
-		displayfreq: 'always',
-		hideaftershow: true,
-		onddexitpop: function($popup){
-			$(document).on(
-				{
-					change: () => {
-						var newImageSrc = $('#thecarrot-color-chooser').val();
-						$('#thecarrot-selected-colour-image').attr('src', newImageSrc);
-					}
-				},
-				'#thecarrot-color-chooser'
-			)
-		}
-	})
-});
