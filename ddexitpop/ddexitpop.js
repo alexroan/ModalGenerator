@@ -49,7 +49,8 @@ var ddexitpop = (function($){
 		settings: null,
 
 		ajaxrequest: function(filepath){
-			var ajaxfriendlyurl = makeajaxfriendly(filepath)
+			// var ajaxfriendlyurl = makeajaxfriendly(filepath)
+			var ajaxfriendlyurl = filepath
 			$.ajax({
 				url: ajaxfriendlyurl,
 				dataType: 'html',

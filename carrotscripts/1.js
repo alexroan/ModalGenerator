@@ -15,7 +15,7 @@ function jQueryLoaded() {
 function ddexitpopLoaded() {
     jQuery(function(){
         ddexitpop.init({
-            contentsource: ['ajax', 'http://modalgenerator.local/popups/1bootstrap.html'],
+            contentsource: ['ajax', 'http://modalgenerator.local/popups/1.html'],
             fxclass: 'random',
             displayfreq: 'always',
             hideaftershow: true,
