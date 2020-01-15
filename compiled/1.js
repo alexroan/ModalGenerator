@@ -1,6 +1,5 @@
-var fileContent = '\
-<link rel="stylesheet" href="http://modalgenerator.local/ddexitpop/signupcarrot.css">\
-<link rel="stylesheet" href="http://modalgenerator.local/ddexitpop/bootstrap.css">\
+var cookieId = 'signupcarrot_local_1';var displayFrequency = 'always';var appUrl = 'http://thecarrot.local';var impressionUrl = 'http://thecarrot.local/api/impression';var fileContent = '<link rel="stylesheet" href="http://thecarrot.local/popups/css/signupcarrot.css">\
+<link rel="stylesheet" href="http://thecarrot.local/popups/css/bootstrap.css">\
 <style>\
 .signupcarrot .vertically-center{\
     display: flex;\
@@ -11,69 +10,62 @@ var fileContent = '\
 .signupcarrot .overflow-break-word{\
     overflow-wrap: break-word;\
 }\
+.signupcarrot h1.scalable{\
+    font-size: 1.5rem;\
+}\
+.signupcarrot h2.scalable{\
+    font-size: 1.25rem;\
+}\
+.signupcarrot #signupcarrot-product-image {\
+    background-position: center center;\
+    background-repeat: no-repeat;\
+    background-size: cover;\
+}\
 @media screen and (max-width: 767px){\
     .signupcarrot .scalable{\
         font-size: 1rem;\
     }\
-}\
-@media screen and (max-width: 991px){\
-    .signupcarrot h1.scalable{\
-        font-size: 1.5rem;\
-    }\
-    .signupcarrot h2.scalable{\
-        font-size: 1.25rem;\
+    .signupcarrot #signupcarrot-product-image {\
+        background-position: center bottom;\
+        height:10rem;\
     }\
 }\
 </style>\
-<div class="container p-2">\
+<div class="container">\
     <div class="row text-center">\
-        <div class="col-6 offset-3 col-sm-4 offset-sm-4 col-md-4 offset-md-0 vertically-center">\
-            <img id="signupcarrot-product-image" class="w-100" src="http://modalgenerator.local/keyring-teal.png">                    \
-            <img class="w-100" src="https://signupcarrot.com/popups/images/pricecut.png">  \
+        <div id="signupcarrot-product-image" class="col-12 col-md-5 offset-md-0"  style="background-image: url(\'http://thecarrot.local/popups/images/keyring-wood.jpg\');">\
         </div>\
-        <div class="col-12 col-md-8 vertically-center">\
+        <div class="col-12 col-md-7 vertically-center py-4">\
             <div>\
                 <div class="col-sm-12">\
-                    <h1 class="scalable text-center overflow-break-word">GET A FREE PERSONALISED KEYRING</h1>\
-                    <h2 class="scalable text-center overflow-break-word">When you sign up to our mailing list</h2>\
+                    <h1 class="scalable text-center overflow-break-word">Get a free personalised keyring</h1>\
+                    <h2 class="scalable text-center overflow-break-word">when you sign up to our newsletter</h2>\
                 </div>\
                 <div class="col-sm-12">\
-                    <form id="signupcarrot-form" class="h-100" action="">\
+                    <form id="signupcarrot-form" class="m-0" target="_blank" action="http://thecarrot.local/subscribe" method="get">\
+                        <input type="hidden" name="signupcarrot-id" id="signupcarrot-id" value="1">\
+                        <input type="hidden" name="signupcarrot-product-select" id="signupcarrot-product-select" value="31161632620646">\
                         <div class="form-group">\
-                            <input required class="form-control" type="text" name="engraving" id="signupcarrot-engraving" placeholder="Keyring Name">\
+                            <input required maxlength="12" class="form-control form-control-sm" type="text" name="signupcarrot-engraving" id="signupcarrot-engraving" placeholder="Name on Keyring">\
                         </div>\
                         <div class="form-group">\
-                            <select required name="product" id="signupcarrot-product-select" class="form-control">\
-                                <option selected data-image="http://modalgenerator.local/keyring-teal.png" value="1">Teal</option>\
-                                <option data-image="http://modalgenerator.local/keyring-orange.png" value="2">Orange</option>\
-                            </select>\
+                            <input required class="form-control form-control-sm" type="email" name="signupcarrot-email" id="signupcarrot-email" placeholder="Email">\
                         </div>\
+                        <div class="form-group"><select required name="MERGE||CURRENCY" id="MERGE||CURRENCY" form="signupcarrot-form" class="form-control form-control-sm"><option selected="selected" disabled="disabled" value="">Currency</option><option value="GBP">GBP</option><option value="EUR">EUR</option><option value="USD">USD</option><option value="AUD">AUD</option></select></div><div class="form-group"><input required="true" class="form-control form-control-sm" type="text" name="MERGE||ORIGIN" id="MERGE||ORIGIN" placeholder="Origin"></div>\
                         <div class="form-group">\
-                            <input required class="form-control" type="email" name="email" id="signupcarrot-email" placeholder="Email">\
+                            <input style="background-color: #007bff" class="w-100 btn btn-primary" type="submit" form="signupcarrot-form" value="Subscribe">\
                         </div>\
-                        <div class="form-group">\
-                            <input required class="form-control" type="text" name="2" id="signupcarrot-2" placeholder="Merge field">\
-                        </div>\
-                        <div class="form-group">\
-                            <input required class="form-control" type="text" name="3" id="signupcarrot-3" placeholder="Merge field">\
-                        </div>\
-                        \
                     </form>\
                 </div>\
             </div>\
         </div>\
     </div>\
-    <div class="row text-center">\
-        <div class="col-sm-12">\
-            <div class="col-sm-12">\
-                <div class="form-group">\
-                    <input style="background-color:teal" class="w-100 btn btn-primary" type="submit" form="subscribe-form" value="CLAIM NOW">\
-                </div>\
-            </div>\
-        </div>\
-    </div>\
 </div>\
-';
+';// var impressionUrl = '';
+// var fileContent = '';
+// var appUrl = '';
+// var displayFrequency = '';
+// var cookieId = '';
 
 document.addEventListener('DOMContentLoaded', function(event) {
     if(typeof jQuery=='undefined') {
@@ -93,7 +85,7 @@ function loadDDExitPopLibrary() {
         var headTag = document.getElementsByTagName("head")[0];
         var ddTag = document.createElement('script');
         ddTag.type = 'text/javascript';
-        ddTag.src = 'http://modalgenerator.local/ddexitpop/ddexitpop.js';
+        ddTag.src = appUrl + '/popups/js/ddexitpop.js';
         ddTag.onload = loadPopperJs;
         headTag.appendChild(ddTag);
     }
@@ -131,23 +123,31 @@ function loadHTML() {
 
 function initializePopup() {
     jQuery(function(){
+        var carrotId = jQuery('#signupcarrot-id').val();
         ddexitpop.init({
             contentsource: ['id', 'signupcarrot'],
             fxclass: 'random',
-            displayfreq: 'always',
+            displayfreq: displayFrequency,
             hideaftershow: true,
+            persistcookie: cookieId,
             onddexitpop: function($popup){
-                console.log("opened");
+                data = {'carrot-id': carrotId};
+                headers = {
+                    'Api-Token': 'alex',
+                }
+                window.jQuery.ajax({
+                    type: 'POST',
+                    headers: headers,
+                    url: impressionUrl,
+                    data: data,
+                    success: function(msg) {
+                        console.log('YAY', msg);
+                    },
+                    error: function(msg) {
+                        console.error('BOO', msg);
+                    }
+                });
             }
         })
     });
-    jQuery(document).on(
-		{
-			change: () => {
-				var newImageSrc = window.jQuery("#signupcarrot-product-select").find("option:selected").attr("data-image");
-				window.jQuery("#signupcarrot-product-image").attr("src", newImageSrc);
-			}
-		},
-		"#signupcarrot-product-select"
-	);
 }
